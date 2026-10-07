@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            width: 350px;
+            background: rgba(255,255,255,0.2);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+        .input{
+            width=10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Login page</h2>
+   <label>user name:</label>
+    <input type="text" name="un" id="un" placeholder="enter name" required="required"/><br><br />
+    <label>password:</label>
+    <input type="password" name="pa" id="un1" placeholder="enter password" required="req"/> <br /><br />
+    <input type="submit" id=" sub" value="save" onclick="sc()" />
+    <input type="reset" id=" reset" value="reset" onclick="cl()"/>
+    </div>
+    <script>
+        function sc() {
+            var n1 = document.getElementById("un").value;
+            var n2 = document.getElementById("un1").value;
+            if (n1 == "trionix" && n2 == "12345678")
+
+                alert("login successfully");
+          
+            else
+                alert("Invalid username and password");
+                
+        }
+        function cl() {
+            document.getElementById("un").value = '';
+            document.getElementById("un1").value = '';
+
+        }
+    </script>
+</body>
+</html>
